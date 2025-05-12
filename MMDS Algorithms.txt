@@ -1,0 +1,220 @@
+1. Week 01: Hadoop
+- 
+2. Week 02: HDFS, MapReduce
+- 
+3. Week 03: PySpark RDDs
+- 
+4. Week 04: Pyspark Dataframe
+- 
+5. Week 05: Frequent Itemset Mining
+i. A-Priori Algorithm
+a. Related Problem
+Finds sets of items that frequently appear together in transactions and creates rules about item relationships.
+b. Input/Output
+? Input:
+- Transaction database
+- Support threshold (minimum frequency requirement)
+- Confidence threshold (minimum strength for rules)
+? Output:
+- All frequent itemsets meeting the support threshold
+- Association rules meeting the confidence threshold
+c. Pseudocode
+A-Priori first identifies frequent single items, then builds larger sets step-by-step, using the knowledge that any subset of a frequent itemset must also be frequent.
+d. Advantages & Disadvantages
+? Advantages:
+- Reduces candidate itemsets significantly
+- Guarantees completeness of results
+- Simple and straightforward implementation
+? Disadvantages:
+- Requires multiple database scans
+- High memory usage with many frequent items
+- Generates numerous candidate itemsets
+ii. PCY Algorithm
+a. Related Problem
+Improves upon A-Priori for finding frequent itemsets and association rules with better memory usage.
+b. Input/Output
+? Input:
+- Transaction database
+- Support threshold (minimum frequency requirement)
+- Confidence threshold (minimum strength for rules)
+? Output:
+- All frequent itemsets meeting the support threshold
+- Association rules meeting the confidence threshold
+c. Pseudocode
+PCY utilizes unused memory during the first pass by hashing potential pairs into buckets, then uses a bitmap to filter candidates in the second pass.
+d. Advantages & Disadvantages
+? Advantages:
+- Makes better use of available memory
+- Further reduces candidate pairs
+- Maintains same pass count as A-Priori
+? Disadvantages:
+- Hash collisions reduce filtering effectiveness
+- Still requires multiple database scans
+- Increased algorithm complexity
+iii. SON Algorithm
+a. Related Problem
+Addresses frequent itemset mining in very large databases by processing manageable chunks.
+b. Input/Output
+? Input:
+- Transaction database
+- Support threshold (minimum frequency requirement)
+- Confidence threshold (minimum strength for rules)
+? Output:
+- All frequent itemsets meeting the support threshold
+- Association rules meeting the confidence threshold
+c. Pseudocode
+SON divides the database into smaller portions, finds local frequent itemsets in each portion, combines these as candidates, then verifies frequency across the entire database.
+d. Advantages & Disadvantages
+? Advantages:
+- Only requires two database passes
+- Naturally supports parallel processing
+- Scalable for very large databases
+? Disadvantages:
+- May generate excess candidates
+- Second pass memory depends on candidate count
+- Partition size selection affects performance
+6. Week 06: Finding Similar Items
+i. MinHash
+a. Related Problem
+b. Input/Output
+? Input:
+- 
+? Output:
+- 
+c. Pseudocode
+d. Advantages & Disadvantages
+? Advantages:
+- 
+? Disadvantages:
+- 
+ii. LSH: Locality Sensitive Hashing
+a. Related Problem
+b. Input/Output
+? Input:
+- 
+? Output:
+- 
+c. Pseudocode
+d. Advantages & Disadvantages
+? Advantages:
+- 
+? Disadvantages:
+- 
+7. Week 07: Clustering
+i. K-means Clustering
+a. Related Problem
+b. Input/Output
+? Input:
+- 
+? Output:
+- 
+c. Pseudocode
+d. Advantages & Disadvantages
+? Advantages:
+- 
+? Disadvantages:
+- 
+ii. The BFR Algorithm
+a. Related Problem
+b. Input/Output
+? Input:
+- 
+? Output:
+- 
+c. Pseudocode
+d. Advantages & Disadvantages
+? Advantages:
+- 
+? Disadvantages:
+- 
+iii. The CURE Algorithm
+a. Related Problem
+b. Input/Output
+? Input:
+- 
+? Output:
+- 
+c. Pseudocode
+d. Advantages & Disadvantages
+? Advantages:
+- 
+? Disadvantages:
+- 
+8. Week 09: Dimensionality Reduction
+i. SVD: Singular Value Decomposition
+a. Related Problem
+b. Input/Output
+? Input:
+- 
+? Output:
+- 
+c. Pseudocode
+d. Advantages & Disadvantages
+? Advantages:
+- 
+? Disadvantages:
+- 
+ii. CUR Decomposition
+a. Related Problem
+b. Input/Output
+? Input:
+- 
+? Output:
+- 
+c. Pseudocode
+d. Advantages & Disadvantages
+? Advantages:
+- 
+? Disadvantages:
+- 
+9. Week 10: Recommender Systems
+i. Content-based Systems
+a. Related Problem
+b. Input/Output
+? Input:
+- 
+? Output:
+- 
+c. Pseudocode
+d. Advantages & Disadvantages
+? Advantages:
+- 
+? Disadvantages:
+- 
+ii. Collaborative Filtering
+a. Related Problem
+b. Input/Output
+? Input:
+- 
+? Output:
+- 
+c. Pseudocode
+d. Advantages & Disadvantages
+? Advantages:
+- 
+? Disadvantages:
+- 
+10. Week 13: PageRank
+i. Random Surfer Model
+a. Related Problem
+b. Input/Output
+? Input:
+- 
+? Output:
+- 
+c. Pseudocode
+d. Advantages & Disadvantages
+? 
+ii. Google Algorithm
+a. Related Problem
+b. Input/Output
+? Input:
+- 
+? Output:
+- 
+c. Pseudocode
+d. Advantages & Disadvantages
+? Advantages:
+- 
+? Disadvantages:
+- 
